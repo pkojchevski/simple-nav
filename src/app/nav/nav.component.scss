@@ -1,0 +1,88 @@
+@import "~src/assets/scss/variables.scss";
+
+nav {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  text-transform: uppercase;
+  background-color: $bg-color;
+}
+
+.logo {
+  letter-spacing: 5px;
+  color: $type-of-white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: $type-of-white;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $type-of-white;
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+
+@media screen and(max-width:1000px) {
+  .nav-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    transform: translateX(100%);
+    position: absolute;
+    height: 92vh;
+    top: 8vh;
+    right: 0;
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .burger {
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

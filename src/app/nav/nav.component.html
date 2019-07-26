@@ -1,0 +1,22 @@
+<nav>
+  <div class="logo">simple nav</div>
+  <!-- <app-nav-links [isNavActive]="isNavActive"></app-nav-links> -->
+  <ul
+    [@linksAnimation]="navLinks.length"
+    class="nav-links"
+    [@toggleNavAnimation]="isNavOpen ? 'open' : 'closed'"
+  >
+    <li *ngFor="let link of navLinks">
+      <a href="#">{{ link }}</a>
+    </li>
+  </ul>
+  <div
+    class="burger"
+    (click)="activateNav(); toggle()"
+    [ngClass]="{ toggle: isToggle }"
+  >
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+$type-of-white: rgb(226, 226, 226);
+$bg-color: darkcyan;
+
+@media screen and(max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
